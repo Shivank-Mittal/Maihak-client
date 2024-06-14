@@ -1,4 +1,137 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
 :host {
     display: block;
-    background: url(../../../assets/images/main-page.jpg)  no-repeat scroll 50% 0 / cover;
+    background: url('../../../assets//images/main-page.jpg');
+    @include background-style;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 300px;
+    max-width: 480px; 
+    position: relative;
+    height: 100%;
+}
+
+.logo {
+    margin: 0 auto;
+    color: white;
+    width: fit-content;
+    text-align: center;
+
+    .name {
+       font-family: $default-font-family1;
+       font-size: 3rem;
+    }
+
+    .restaurant-type {
+        font-size: 3rem;
+        font-family: $default-font-family;
+    }
+} 
+
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../../../assets/images/contact-background.png');
+    width: 100%;
+    min-height: 15vh;
+    align-items: center;
+    margin-top: 20vh;
+    font-family: $default-font-family1;
+    color: darken(saturate(adjust_hue($white, 49.999999999999986), 93.75000000000003%), 6.274509803921575%);
+    position: relative;
+    padding: 20px 0;
+    a {
+        text-decoration: none;
+        color: $primary;
+        font-size: $default-font-size-xl;
+    }
+
+    a:hover {
+        color: white;
+    } 
+
+    h2 {
+        font-size: $default-font-size-xl;
+    }
+}
+
+.reservation-text {
+    color: $primary;
+}
+
+.order {
+    position: absolute;
+    top: 143px;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    transform: translatex(-50%);
+    z-index: 3;
+    line-height: 26px;
+    width: 206px;
+    height: 206px;
+    border-radius: 50%;
+    padding-top: 103px; 
+    background: transparent url("../../../assets/images/contact-background.png") repeat;
+}
+
+.order:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: url("../../../assets/images/button1.png") no-repeat;
+    z-index: -1;
+    width: 206px;
+    height: 167px; 
+}
+
+.order > a {
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #fffdf3; 
+}
+
+.order > a:hover {
+    color: #ffcc00; 
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px; 
+    } 
+
+    .contact{
+        margin-top: 40vh;
+    }
+
+    .order {
+        // top: 115px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px; 
+    } 
+    .contact{
+        margin-top: 50vh;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;  
+    } 
+
+    .contact{
+        margin-top: 55vh;
+    }
 }

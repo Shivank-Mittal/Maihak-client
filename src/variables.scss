@@ -17,14 +17,6 @@ $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
 
-// Fonts
-$default-font-family: 'Unna', serif;
-$default-font-family1: 'Cinzel Decorative', cursive;
-$default-font-weight: 400;
-$default-font-size: 24px;
-$default-line-height: 36px;
-
-
 // Anchor Colors
 $default: #000;
 $contrast: #fff;
@@ -52,3 +44,13 @@ $box-shadow-key-small: 3px 4px 5px 0px rgba(0, 0, 0, 0.11);
 $box-shadow-key-light: 3px 4px 8px 0px rgba(0, 0, 0, 0.11);
 $box-shadow-key-light-large: 8px 14px 18px 0px rgba(0, 0, 0, 0.11);
 
+
+// Fonts
+$default-font-family: 'Unna', serif;
+$default-font-family1: 'Cinzel Decorative', cursive;
+$default-font-weight: 400;
+$default-line-height: 36px;
+$default-font-size-sm: 0.5rem;
+$default-font-size-m: 1rem;
+$default-font-size-l: 2rem;
+$default-font-size-xl: clamp(1rem, 3vh + 1rem, 5rem);
