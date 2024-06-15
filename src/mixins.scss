@@ -4,6 +4,29 @@
     background-size: cover;
 }
 
-@function backgroundImage($name) {
-    
+
+
+@function container-width($size: 'sm') {
+    @if #{$size} == 'sm' { @return 480px; }
+
+    @if #{$size} == 'md' { @return  750px; }
+
+    @if #{$size} == 'lg' { @return  970px; }
+
+    // return if xl or greater then xl
+    @return  1200px;
 }
+
+
+//container
+@mixin container ($size: 'sm') {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 300px;
+    position: relative;
+    height: 100%;
+    max-width: containerWidth($size);
+    overflow: hidden
+};

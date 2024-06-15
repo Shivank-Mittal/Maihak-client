@@ -1,0 +1,57 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
+
+:host {
+    display: block;
+    background: url('../../../assets/images/welcome-page.jpg') repeat 0 0 / cover;
+    @include background-style;
+}
+
+
+.container {
+    @each $key, $val in $breakpoints {
+        @media (min-width: $val) { 
+            @include container($key);
+        }
+    }
+
+    div {
+        background-image: url('../../../assets/images/welcome-food-background.jpg');
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        min-height: 70svh;
+        padding: 5svh 0;
+        color: $brown;
+        overflow: hidden;
+
+        img {
+            @media (max-width: map-get($breakpoints, sm)) { 
+                max-width: 300px
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            margin: 5svh;
+            font-size: $default-font-size-xxl ;
+            text-align: center;
+        }
+
+        p {
+            font-family: $default-font-family;
+            font-size: $default-font-size-l;
+            
+            width: 60%;
+            margin: 5svh;
+            text-align: justify;
+
+            @media (max-width: map-get($breakpoints, sm)) { 
+                width: 80%;
+            }
+        }
+    }
+}

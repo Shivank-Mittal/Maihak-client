@@ -8,19 +8,16 @@
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: 300px;
-    max-width: 480px; 
-    position: relative;
-    height: 100%;
+    @each $key, $val in $breakpoints {
+        @media (min-width: $val) { 
+            @include container($key);
+        }
+    }
 }
 
 .logo {
     margin: 0 auto;
-    color: white;
+    color: $white;
     width: fit-content;
     text-align: center;
 
@@ -52,6 +49,8 @@
         text-decoration: none;
         color: $primary;
         font-size: $default-font-size-xl;
+        text-align: center;
+        word-wrap: break-word;
     }
 
     a:hover {
@@ -60,6 +59,8 @@
 
     h2 {
         font-size: $default-font-size-xl;
+        text-align: center;
+        word-wrap: break-word;
     }
 }
 
@@ -97,19 +98,15 @@
     letter-spacing: 1.4px;
     text-transform: uppercase;
     font-size: 26px;
-    color: #fffdf3; 
+    color: $white; 
 }
 
 .order > a:hover {
-    color: #ffcc00; 
+    color: $primary; 
 }
 
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 750px; 
-    } 
-
     .contact{
         margin-top: 40vh;
     }
@@ -118,19 +115,12 @@
         // top: 115px;
     }
 }
-@media (min-width: 992px) {
-    .container {
-        max-width: 970px; 
-    } 
+@media ($screen-md-min: 992px) {
     .contact{
         margin-top: 50vh;
     }
 }
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;  
-    } 
-
+@media ($screen-lg-min: 1200px) {
     .contact{
         margin-top: 55vh;
     }
