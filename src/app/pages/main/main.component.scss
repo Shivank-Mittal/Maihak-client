@@ -5,6 +5,7 @@
     display: block;
     background: url('../../../assets//images/main-page.jpg');
     @include background-style;
+    padding-top: 30px;
 }
 
 .container {
@@ -23,12 +24,20 @@
 
     .name {
        font-family: $default-font-family1;
-       font-size: 3rem;
+       font-size: $default-font-size-xxl;
+       font-weight: bold;
     }
 
     .restaurant-type {
         font-size: 3rem;
         font-family: $default-font-family;
+    }
+
+    img {
+        height: 12vh;
+        @media all and (max-width: map-get($breakpoints, md)) {
+            height: 10vh;
+        }
     }
 } 
 

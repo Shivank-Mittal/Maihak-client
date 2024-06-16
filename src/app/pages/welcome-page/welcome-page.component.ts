@@ -10,8 +10,10 @@ import { Component } from '@angular/core';
 export class WelcomePageComponent {
 
   welcomTitle = 'Welcome to '
-  welcomeText = `In our restaurant you will get to know, if you are not already familiar with it, the cuisine of North India.
-You will find welcome, smiles and friendship which are translated into Indian language by MAIHAK.
-You will find a new flavor in chicken, lamb, fish and shrimp, biryani prepared with 25 spices including the famous curry, grilled in the tandoor (charcoal earthenware oven), differently prepared and the exceptional basmati rice goes well with all dishes.`
+  welcomeText = `Dans notre restaurant vous ferez connaissance, si nous n'y êtes pas déjà familiarisé, avec la cuisine du nord de l'inde.
+Vous y trouverez accueil, sourire et amitié qui se traduisent en langue indienne par MAIHAK.
+Vous trouverez une saveur nouvelle au poulet, à l'agneau, aux poissons et crevettes, au biryani préparé avec 25 épices dont les fameux curry, les grillades au tandoor (four en terre cuite au charbon de bois), différemment préparés et l'exceptionnel riz basmati s'accomodant avec tous les plats.
+
+`
 
 }

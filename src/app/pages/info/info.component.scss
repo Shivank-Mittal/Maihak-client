@@ -1,0 +1,60 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
+
+:host {
+    display: block;
+    background-image: url('../../../assets/images/info-page-background.jpg') ;
+    @include background-style;
+    
+    padding-top: 15vh;
+    color:  $white;
+}
+
+.container {
+    @each $key, $val in $breakpoints {
+        @media (min-width: $val) { 
+            @include container($key);
+        }
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    min-height: 70vh;
+
+    h2 {
+        color: $white;
+        font-family: $default-font-family1;
+        font-weight: bold;
+        font-size: $default-font-size-xl;
+    }
+
+    time {
+        font-size: $default-font-size-l;
+    }
+
+    .and, time {
+        color: $primary;
+    }
+
+    p {
+        width: $paragraph-width;
+        margin: 0 auto;
+        text-align: justify;
+        font-family: $default-font-family;
+        font-size: $default-font-size-l;
+        white-space: pre-line;
+
+        @media (max-width: map-get($breakpoints, sm)) { 
+            width: $paragraph-width-xl;
+        }
+    }
+
+
+
+    div {
+        margin-bottom: 5vh;
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
+
+:host {
+    @include background-style;
+    display: block;
+    background-image: url('../../../assets/images/menu-page-background.jpg');
+    height: 100vh;
+}
+
+.container {
+    @each $key, $val in $breakpoints {
+        @media (min-width: $val) { 
+            @include container($key);
+        }
+    }
+
+    min-height: 70vh;
+}

@@ -16,17 +16,21 @@
         }
     }
 
-    div {
+    background-image: url('../../../assets/images/welcome-food-background.jpg');
+    background-clip: content-box;
+
+    .container-background {
         background-image: url('../../../assets/images/welcome-food-background.jpg');
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        min-height: 70svh;
+        min-height: 110svh;
         padding: 5svh 0;
         color: $brown;
-        overflow: hidden;
+        overflow-x: hidden;
+        transform: translateY(10vh);
 
         img {
             @media (max-width: map-get($breakpoints, sm)) { 
@@ -36,7 +40,7 @@
 
         h1 {
             font-weight: bold;
-            margin: 5svh;
+            margin: 0 5svh;
             font-size: $default-font-size-xxl ;
             text-align: center;
         }
@@ -45,12 +49,12 @@
             font-family: $default-font-family;
             font-size: $default-font-size-l;
             
-            width: 60%;
+            width: $paragraph-width;
             margin: 5svh;
             text-align: justify;
 
             @media (max-width: map-get($breakpoints, sm)) { 
-                width: 80%;
+                width: $paragraph-width-xl;
             }
         }
     }
