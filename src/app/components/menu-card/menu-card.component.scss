@@ -1,0 +1,31 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
+
+:host {
+    font-family: $default-font-family ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: url('../../../assets/images/welcome-page.jpg');
+    height: 50px;
+    padding: 5px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-color: transparent;
+    left: 30px;
+}
+
+h3 {
+    font-size: larger;
+    margin: 0;
+}

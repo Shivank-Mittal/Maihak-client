@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-card',
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './menu-card.component.scss'
 })
 export class MenuCardComponent {
+  @Input() imgSrc = '';
+  @Input() name = '';
+
+  backupImage = '../../../assets/images/food/spices.jpg';
+
+  handleImageError(event: any) {
+    event.target.src = this.backupImage;
+  }
 
 }

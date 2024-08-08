@@ -1,0 +1,38 @@
+<div class="menu">
+    <a id = 'maihak' href="./"> <h3> Maihak </h3> </a>
+    <h1>Menu</h1>
+    <a href="../../../assets/pdf/menu.pdf" download="../../../assets/pdf/menu.pdf"> 
+       <h3> 
+        <img class="download-button" src="../../../assets/images/file-download-svgrepo-com.svg" alt="" srcset="">
+        Download
+       </h3>
+    </a>
+</div>
+
+<div class="carousel">
+    <p-carousel 
+        [value]='menu'
+        [numVisible]="menuScrollItemVisible" 
+        [numScroll]="1" 
+        [circular]="true">
+            <ng-template let-product pTemplate="item">
+                <div class="app-menu-card-wrapper">
+                    <app-menu-card (click)= "showMenuDetails(product.type)" [name]="product.type"></app-menu-card>
+                </div>
+            </ng-template>
+    </p-carousel>
+</div>
+
+
+<div class="menu-items">
+    <div class="title">{{selectedMenuTitle}}
+         @if (menuPrice) {
+             <span class="menu-price">&nbsp; -  &nbsp;{{menuPrice | currency: 'EUR' }} </span>
+            } 
+        @if(selectedMenuDetails[0].type === 'MENU' && selectedMenuDetails[0].availability) {
+            <div class="availability" [innerText]="selectedMenuDetails[0].availability"> </div>
+        }
+    </div> 
+   
+    <app-menu-detail [selectedMenuDetails] = 'selectedMenuDetails'></app-menu-detail>
+</div>

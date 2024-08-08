@@ -14,6 +14,19 @@
             @include container($key);
         }
     }
+    position: relative;
+
+    .menu-icon {
+        position: absolute;
+        right: 1rem;
+        color: $primary;
+        cursor: pointer;
+        
+        a {
+            text-decoration: none;
+            color: $primary;
+        }
+    }
 }
 
 .logo {
@@ -66,10 +79,12 @@
         color: white;
     } 
 
-    h2 {
-        font-size: $default-font-size-xl;
-        text-align: center;
-        word-wrap: break-word;
+    .order-link{
+        h2 {
+            font-size: $default-font-size-xl;
+            text-align: center;
+            word-wrap: break-word;
+        }
     }
 }
 

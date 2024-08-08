@@ -1,0 +1,50 @@
+:host {
+    display: block;
+}
+
+.menu-item_a_la_carte{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: left;
+    font-size: larger;
+    padding: 0 10%;
+    margin-bottom: 15px;
+    .item-name {
+        width: 70%;
+        .item-name_detail {
+            font-size: small;
+        }
+    }
+}
+
+
+.menu-item_plat {
+    text-align: center;
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+        padding-bottom: 10svh;
+
+        .section-item {
+            display: flex;
+            flex-direction: row;
+            padding-top: 2svh;
+            .item-name {
+                font-size: medium;
+            }
+        }
+    }
+
+}
+
+
+.or {
+    text-decoration: underline;
+    color: gray;
+}
+
