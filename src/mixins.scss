@@ -20,12 +20,11 @@
 
 //container
 @mixin container ($size: 'sm') {
+    position: relative;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
     min-width: 300px;
-    position: relative;
-    height: 100%;
     max-width: container-width($size);
 };

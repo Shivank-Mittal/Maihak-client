@@ -1,10 +1,12 @@
 <div class="container">
     <div class="container-background">
         <div class="welcome">
-            <h1>आपका स्वागत है</h1>
-            <h1>Bienvenue</h1>
+            <ngx-typed-js [strings]="['आपका स्वागत है', 'Bienvenue']" [loop]="true" [typeSpeed]="100" [backSpeed]="50">
+                <span class="typing"></span>
+            </ngx-typed-js>
         </div>
-        <img src="../../../assets/images/welcome-food.jpg" alt="">
+        
+        <img class="welcome-food" src="../../../assets/images/welcome-food.jpg" alt="">
         <p>{{welcomeText}}</p>
     </div>
 </div>

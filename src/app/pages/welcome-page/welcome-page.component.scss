@@ -31,14 +31,19 @@
         color: $brown;
         overflow-x: hidden;
         transform: translateY(10vh);
+        
+        .welcome {
+            z-index: 100;
+        }
 
         img {
             @media (max-width: map-get($breakpoints, sm)) { 
                 max-width: 300px
             }
+            z-index: -100;
         }
 
-        h1 {
+        span {
             font-weight: bold;
             margin: 0 5svh;
             font-size: $default-font-size-xxl ;

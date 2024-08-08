@@ -1,13 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {NgxTypedJsModule} from 'ngx-typed-js';
+declare var anime: any; 
 
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [],
+  imports: [NgxTypedJsModule],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.scss'
 })
-export class WelcomePageComponent {
+export class WelcomePageComponent  implements OnInit{
+
+  ngOnInit(): void {
+
+    anime({
+      targets: '.welcome-food',
+      rotate: '1turn',
+      loop: true,
+      backgroundColor: '#FFF',
+      duration: 12000,
+    });
+  }
 
   welcomTitle = 'Welcome to '
   welcomeText = `Dans notre restaurant vous ferez connaissance, si nous n'y êtes pas déjà familiarisé, avec la cuisine du nord de l'inde.
