@@ -1,0 +1,30 @@
+@mixin background-style{ 
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+@function container-width($size: 'sm') {
+    @if #{$size} == 'sm' { @return 480px; }
+
+    @if #{$size} == 'md' { @return  750px; }
+
+    @if #{$size} == 'lg' { @return  970px; }
+
+    // return if xl or greater then xl
+    @return  1200px;
+}
+
+
+//container
+@mixin container ($size: 'sm') {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 300px;
+    max-width: container-width($size);
+};

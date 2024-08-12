@@ -1,0 +1,66 @@
+@import '../../../mixins.scss';
+@import '../../../variables.scss';
+
+
+:host {
+    display: block;
+    background: url('../../../assets/images/welcome-page.jpg') repeat 0 0 / cover;
+    @include background-style;
+}
+
+
+.container {
+    @each $key, $val in $breakpoints {
+        @media (min-width: $val) { 
+            @include container($key);
+        }
+    }
+
+    background-image: url('../../../assets/images/welcome-food-background.jpg');
+    background-clip: content-box;
+
+    .container-background {
+        background-image: url('../../../assets/images/welcome-food-background.jpg');
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        min-height: 110svh;
+        padding: 5svh 0;
+        color: $brown;
+        overflow-x: hidden;
+        transform: translateY(10vh);
+        
+        .welcome {
+            z-index: 100;
+        }
+
+        img {
+            @media (max-width: map-get($breakpoints, sm)) { 
+                max-width: 300px
+            }
+            z-index: -100;
+        }
+
+        span {
+            font-weight: bold;
+            margin: 0 5svh;
+            font-size: $default-font-size-xxl ;
+            text-align: center;
+        }
+
+        p {
+            font-family: $default-font-family;
+            font-size: $default-font-size-l;
+            
+            width: $paragraph-width;
+            margin: 5svh;
+            text-align: justify;
+
+            @media (max-width: map-get($breakpoints, sm)) { 
+                width: $paragraph-width-xl;
+            }
+        }
+    }
+}

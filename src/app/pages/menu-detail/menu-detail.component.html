@@ -1,0 +1,30 @@
+<div class="wrapper">
+    @for (menuDetail of selectedMenuDetails; track $index) {
+        @if(menuDetail.type === 'A La Carte') {
+            <div class="menu-item_a_la_carte">
+                <div class="item-name">
+                    <div>{{menuDetail.item}}</div>
+                    <div class="item-name_detail">{{menuDetail.detail}}</div>
+                </div>
+                <div class="item-price">{{menuDetail.price | currency: 'EUR'}} </div>
+            </div>
+        }
+        @else {
+            <div class="menu-item_plat">
+                @for (menuSection of menuDetail.detail; track $index) {
+                    <div class="section">
+                        <h3>{{menuSection.section}}</h3>
+                        @for (item of menuSection.items; track $index) {
+                            <div class="section-item">
+                                <div>
+                                    <div class="item-name"> @if(item.isOptional) {<span class="or">OU</span>} {{' ' +item.itemName}}</div>
+                                    {{item.detail}}
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>

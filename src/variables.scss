@@ -1,0 +1,71 @@
+//========================================================
+//                     Variables
+//=========================================================
+
+// Use relative measurements. Change to 0 on "Post Production"
+
+// Layouts
+$layout-boxed-width: 1920px;
+$layout-boxed-bg: #444;
+
+
+// Resolutions
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$breakpoints: (
+  sm: 576px,  // Small devices (phones, 576px and up)
+  md: 768px,  // Medium devices (tablets, 768px and up)
+  lg: 992px,  // Large devices (desktops, 992px and up)
+  xl: 1200px,  // Extra large devices (large desktops, 1200px and up)
+  xxl: 1400px  // Extra extra large devices (larger desktops, 1400px and up)
+);
+
+
+// Anchor Colors
+$default: #000;
+$contrast: #fff;
+$white: #fff;
+$primary: #ffcc00;
+$brown: #554539;
+
+// Relative Colors
+$grayscale-darken: lighten($default, 20%);
+$grayscale-default: lighten($default, 53.333333333333336%);
+$grayscale-lighten: lighten($default, 92.15686274509804%);
+$grayscale-lightest: lighten($default, 96.47058823529412%);
+
+$content-color: darken(saturate(adjust_hue($white, 49.999999999999986), 93.75000000000003%), 6.274509803921575%);
+$content-bg: lighten(saturate(adjust_hue($default, 350), 52.500000000000014%), 15.686274509803921%);
+
+// Round Corvers
+$border-radius-small: 0px;
+$border-radius-base: 0px;
+$border-radius-large: 0px;
+
+
+// Shadows
+$box-shadow-ambient: 0 0 0 rgba(0, 0, 0, .12);
+$box-shadow-key-small: 3px 4px 5px 0px rgba(0, 0, 0, 0.11);
+$box-shadow-key-light: 3px 4px 8px 0px rgba(0, 0, 0, 0.11);
+$box-shadow-key-light-large: 8px 14px 18px 0px rgba(0, 0, 0, 0.11);
+
+
+// Fonts
+$default-font-family: 'Unna', serif;
+$default-font-family1: 'Cinzel Decorative', cursive;
+$default-font-weight: 400;
+$default-line-height: 36px;
+$default-font-size-sm: 0.5rem;
+$default-font-size-m: 1rem;
+$default-font-size-l: clamp(1rem, 1vh + 1rem, 2rem);;
+$default-font-size-xl: clamp(1rem, 3vh + 1rem, 5rem);
+$default-font-size-xxl: clamp(1rem, 4vh + 1rem, 7rem);
+
+
+
+//Paragraphs
+$paragraph-width: 60%;
+$paragraph-width-xl: 80%;
