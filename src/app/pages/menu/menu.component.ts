@@ -21,7 +21,7 @@ declare var window:any
 export class MenuComponent implements OnInit{
   
 menu: any[] = getCollection();
-selectedMenuTitle?: string = MenuCollection[0].type;
+selectedMenuTitle?: string = this.convertToCaps(MenuCollection[0].type);
 selectedMenuDetails: menuItem[] = MenuCollection[0].collection;
 menuCollection: menuCollection = MenuCollection;
 products: any;
@@ -36,7 +36,7 @@ ngOnInit(): void {
   if(isPlatformBrowser(this.platformID))  {
     const isMobileMode = window.matchMedia("(max-width: 850px)").matches;
   
-    this.menuScrollItemVisible = isMobileMode ? 4: 7
+    this.menuScrollItemVisible = isMobileMode ? 2: 7
   }
 
 }

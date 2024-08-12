@@ -46,6 +46,12 @@
         font-size: $default-font-size-l;
     }
 
+    #maihak {
+        font-family: $default-font-family1;
+        font-size: $default-font-size-xxl;
+        font-weight: bold;
+    }
+
     @media (max-width: $screen-sm-min) { 
 
         #maihak {
@@ -77,10 +83,15 @@
     
     .title{
         text-align: center;
-        text-decoration: underline;
-        margin-bottom: 10%;
+        color: #DAC3A1;
+        // text-decoration: underline;
+        margin-bottom: 15%;
         top: 0;
         font-size: $default-font-size-xl;
+
+        @media (min-width: $screen-lg-min) {
+            margin-bottom: 5%;
+        }
 
         span{
             font-size: $default-font-size-xl;

@@ -1,7 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { menuItem } from '../menu/menu-type';
 import { CurrencyPipe } from '@angular/common';
-declare var anime: any; 
 @Component({
   selector: 'app-menu-detail',
   standalone: true,
@@ -15,24 +14,10 @@ export class MenuDetailComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['selectedMenuDetails']) {
-      this.animate();
+      // this.animate();
     }
   }
   ngOnInit(): void {
-    if(anime) {
-      this.animateValue = anime({
-        targets: '.wrapper',
-        translateX: 250,
-        direction: 'reverse',
-        easing: 'easeInOutSine'
-      });
-    }
-  }
-
-  animate() {
-    if(this.animateValue) {
-      this.animateValue.restart()
-    }
   }
 
 }
